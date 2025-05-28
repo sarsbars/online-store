@@ -99,7 +99,6 @@ h1 {
     font-weight: 600;
     color: #fff;
     font-weight: 500;
-    text-transform: uppercase;
     place-content: center;
 }
   
@@ -162,6 +161,12 @@ input[type=text] {
         background-color: var(--primary-orange-dark);
         transition: background-color 0.25s ease-in-out;
     }
+}
+
+.active {
+    border-bottom:2px solid var(--primary-orange);
+    font-weight: 600;
+    color: var(--primary-orange);
 }
 
 

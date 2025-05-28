@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 function Header() {
     return (
         <header>
@@ -10,10 +12,10 @@ function Header() {
                 </div>
                 <nav className="flex gap-80 align-items">
                     <ul className="nav-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="#">BestSellers</a></li>
+                        <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/'>Home</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/detail'>Product</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/cart'>Cart</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/not-found'>BestSellers</NavLink></li>
                     </ul>
                     <a href="index.html" class="logout">Logout</a>
                 </nav>
