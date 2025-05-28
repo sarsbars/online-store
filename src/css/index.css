@@ -12,13 +12,26 @@ code {
     monospace;
 }
 
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+:root {
+  --primary-green: #00585c;
+  --on-primary-green: #f5ffff;
+  --primary-orange: #dc9400;
+  --primary-orange-dark: #996600;
+  --button-padding: 12px 24px;
+  --button-radius: 5px;
+}
+
 /*-----------------------Utility function--------------*/
 
 
 .flex{
     display: flex;
 }
-/* ---------Utility classes------------- */
 
 .gap-40 {
     gap: 40px;
@@ -73,17 +86,7 @@ code {
 
 header {
     height: 56px;
-    background-color: var(--cards-color);
-}
-
-footer {
-    height: 60px;
-    background-color: #dfdfdf;
-
-    p {
-        text-align: center;
-        line-height: 60px;
-    }
+    background-color: var(--primary-green);
 }
 
 /* ---------------------------------- */
@@ -103,7 +106,7 @@ h1 {
     line-height: 20px;
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #fff;
     font-weight: 500;
     text-transform: uppercase;
     place-content: center;
@@ -119,12 +122,12 @@ nav .nav-list li {
   
     a {
         text-decoration: none;
-        color: #525252;
+        color: var(--on-primary-green);
         font-size: 1.6rem;
         font-weight: 500;
     
         &:hover {
-            color: var(--primary-colour);
+            color: var(--primary-orange);
             transition: color 0.25s ease-in-out;
         }
     }
@@ -150,21 +153,22 @@ input[type=text] {
     border: 1px solid transparent;
   
     &:focus {
-        border: 1px solid var(--primary-color);
+        border: 1px solid var(--primary-orange);
+        box-shadow: 0 0 6px rgba(220, 148, 0, 0.3);
     }
 }
 
 .logout {
     padding: var(--button-padding);
     border-radius: var(--button-radius);
-    background-color: var(--primary-color);
-    color: var(--on-primary-color);
+    background-color: var(--primary-orange);
+    color: #fff;
     font-weight: 600;
     font-size: 1.4rem;
     text-decoration: none;
 
     &:hover {
-        background-color: var(--primary-dark);
+        background-color: var(--primary-orange-dark);
         transition: background-color 0.25s ease-in-out;
     }
 }
