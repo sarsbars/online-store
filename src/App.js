@@ -1,12 +1,24 @@
 import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Detail from "./pages/Detail";
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Header />
-      <NotFound /> 
-      {/* above line is just for testing */}
+      <main>
+        <div className="container">
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/cart' element={<Cart />} />
+            <Route exact path='/detail' element={<Detail />} />
+            <Route exact path='/notfound' element={<NotFound />} />
+          </Routes>
+        </div>
+      </main>
     </>
   );
 }

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-    font-family: 'Gabirito', Arial, open-sans, sans-serif;
+    font-family: 'Gabirito', Arial, sans-serif;
 }
 .container {
   width: min(100% - 30px, 1080px);
@@ -16,8 +16,6 @@ body {
   --button-padding: 12px 24px;
   --button-radius: 5px;
 }
-
-
 
 /*-----------------------Utility function--------------*/
 
