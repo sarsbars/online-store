@@ -165,6 +165,12 @@ input[type=text] {
     }
 }
 
+.active {
+    border-bottom:2px solid var(--primary-orange);
+    font-weight: 600;
+    color: var(--primary-orange);
+}
+
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
