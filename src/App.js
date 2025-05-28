@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
+import { Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
