@@ -1,10 +1,11 @@
 function NotFound() {
     return (
-        <section>
-            <h2>404 Not Found </h2>
-              <p className='sorry'>Sorry</p>
-              <p classname='couldnt-find'>we couldn't find that page</p>
-              <button>Back to Home</button>
+        <section className='error-message column-direction center container flex'>
+            <h2 className='not-found'>404 Not Found </h2>
+              <p classname='couldnt-find'>
+                We're sorry, the page you are looking for cannot be found.
+              </p>
+              <button className='back-home'>Back to Home</button>
         </section>
     );
 }
