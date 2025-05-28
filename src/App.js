@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import Detail from "./pages/Detail";
 import { Routes, Route } from 'react-router-dom';
 
+
 function App() {
   return (
     <>
