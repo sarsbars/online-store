@@ -177,29 +177,41 @@ input[type=text] {
     height: 600px;
     display: grid;
     place-content: center;
-    background: #fff url(../img/bg-1.jpg);
+    background: #fff url(../img/bg-1.jpg) center center / cover no-repeat;
 
     p {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-top: 8px;
+        color: #fff;
     }
 }
 
+.overlay {
+    padding: 24px;
+    background-color: rgb(255 255 255 / 15%);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgb(255 255 255 / 5%);
+    width: 50%;
+    border-radius: 16px;
+}
+
 h2 {
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 800;
     line-height: 1.2;
+    color: var(--on-primary-green);
 }
 
 button {
     padding: var(--button-padding);
-    border-radius: var(--button-radius);
+    border-radius: 50px;
 }
 
-.sign-up {
+.shop-now {
     background-color: var(--primary-orange);
     margin-right: 16px;
     color: #fff;
+    margin-top: 32px;
 
     &:hover {
         background-color: var(--primary-orange-dark);
@@ -207,19 +219,8 @@ button {
     }
 }
 
-.shop-now {
-    background-color: transparent;
-    border: 1px solid var(--primary-orange);
-    color: var(--primary-orange);
-
-    &:hover {
-        background-color: rgb(255 255 255 / 5%);
-        transition: background-color 0.25s ease-in-out;
-    }
-}
-
-.button-container {
-    margin-top: 24px;
+.shop-now-icon {
+    margin-left: 8px;
 }
 
 
