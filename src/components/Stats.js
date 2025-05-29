@@ -1,9 +1,9 @@
 function Stats() {
     return (
-        <section>
+        <section className="flex space-between">
             <div className="stats-box">
                 <h3>2000+</h3>
-                <p>Happy clients</p>
+                <p>Happy Clients</p>
             </div>
             <div className="stats-box">
                 <h3>300+</h3>
@@ -11,11 +11,11 @@ function Stats() {
             </div>
             <div className="stats-box">
                 <h3>1M+</h3>
-                <p>Orders shipped</p>
+                <p>Orders Shipped</p>
             </div>
             <div className="stats-box">
                 <h3>4.9</h3>
-                <p>Average rating</p>
+                <p>Average Rating</p>
             </div>
         </section>
     );
