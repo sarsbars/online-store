@@ -12,8 +12,8 @@ function App() {
     <>
       <Header />
       <main>
-        <div className="container">
           <HeroBanner />
+        <div className="container">
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />

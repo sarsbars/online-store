@@ -174,12 +174,14 @@ input[type=text] {
 /*------------------------Hero-banner---------------------*/
 
 .hero-banner {
-    height: 500px;
+    height: 600px;
     display: grid;
     place-content: center;
+    background: #fff url(../img/bg-1.jpg);
 
     p {
         font-size: 2rem;
+        margin-top: 8px;
     }
 }
 
@@ -196,6 +198,8 @@ button {
 
 .sign-up {
     background-color: var(--primary-orange);
+    margin-right: 16px;
+    color: #fff;
 
     &:hover {
         background-color: var(--primary-orange-dark);
@@ -203,6 +207,20 @@ button {
     }
 }
 
+.shop-now {
+    background-color: transparent;
+    border: 1px solid var(--primary-orange);
+    color: var(--primary-orange);
+
+    &:hover {
+        background-color: rgb(255 255 255 / 5%);
+        transition: background-color 0.25s ease-in-out;
+    }
+}
+
+.button-container {
+    margin-top: 24px;
+}
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
