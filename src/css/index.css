@@ -171,6 +171,40 @@ input[type=text] {
 
 
 
+/*------------------------Hero-banner---------------------*/
+
+.hero-banner {
+    height: 500px;
+    display: grid;
+    place-content: center;
+
+    p {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+button {
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+}
+
+.sign-up {
+    background-color: var(--primary-orange);
+
+    &:hover {
+        background-color: var(--primary-orange-dark);
+        transition: background-color 0.25s ease-in-out;
+    }
+}
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*                  404 Not Found                      */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
