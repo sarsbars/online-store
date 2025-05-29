@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Detail from "./pages/Detail";
 import { Routes, Route } from 'react-router-dom';
+import HeroBanner from "./components/HeroBanner";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main>
         <div className="container">
+          <HeroBanner />
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />
