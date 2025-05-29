@@ -15,11 +15,11 @@ function Header() {
                         <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/'>Home</NavLink></li>
                         <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/detail'>Product</NavLink></li>
                         <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/cart'>Cart</NavLink></li>
-                        <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/not-found'>BestSellers</NavLink></li>
+                        <li><NavLink className={navData => (navData.isActive ? 'active' : '')} to='/notfound'>BestSellers</NavLink></li>
                     </ul>
-                    <a href="index.html" class="logout">Logout</a>
+                    <a href="index.html" className="logout">Logout</a>
                 </nav>
-                <button className="hamburger"><i class="fa-solid fa-bars"></i></button>
+                <button className="hamburger"><i className="fa-solid fa-bars"></i></button>
             </div>
         </header>
     );
