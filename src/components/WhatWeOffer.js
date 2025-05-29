@@ -3,28 +3,28 @@ import { faTruckFast, faBagShopping, faClock, faRightLeft } from '@fortawesome/f
 
 function WhatWeOffer() {
     return (
-        <section>
+        <section className='flex space-between'>
             <div className="box">
                 <div className="icon-circle">
-                    <FontAwesomeIcon icon={faTruckFast} />
+                    <FontAwesomeIcon icon={faTruckFast} className='icon'/>
                 </div>
                 <p>Fast and free shipping</p>
             </div>
             <div className="box">
                 <div className="icon-circle">
-                    <FontAwesomeIcon icon={faBagShopping} />
+                    <FontAwesomeIcon icon={faBagShopping} className='icon'/>
                 </div>
                 <p>Easy to shop</p>
             </div>
             <div className="box">
                 <div className="icon-circle">
-                    <FontAwesomeIcon icon={faClock} />
+                    <FontAwesomeIcon icon={faClock} className='icon'/>
                 </div>
                 <p>24/7 support</p>
             </div>
             <div className="box">
                 <div className="icon-circle">
-                    <FontAwesomeIcon icon={faRightLeft} />
+                    <FontAwesomeIcon icon={faRightLeft} className='icon'/>
                 </div>
                 <p>Hassle free returns</p>
             </div>

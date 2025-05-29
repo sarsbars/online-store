@@ -6,6 +6,7 @@ import Detail from "./pages/Detail";
 import { Routes, Route } from 'react-router-dom';
 import HeroBanner from "./components/HeroBanner";
 import Stats from "./components/Stats";
+import WhatWeOffer from "./components/WhatWeOffer";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <HeroBanner />
         <div className="container">
           <Stats />
+          <WhatWeOffer />
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />
