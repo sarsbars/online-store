@@ -6,6 +6,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 function ProductGallery() {
 
     const[products, setProducts] = useState([]);
+    const [sortOption, setSortOption] = useState("");
     const[error, setError] = useState('');
     
     const URL = 'https://fakestoreapi.com/products';
@@ -25,13 +26,37 @@ function ProductGallery() {
         fetchProduct();
     }, []);
 
+      const sortedProducts = [...products].sort((a, b) => {
+    if (sortOption === "price-low-high") {
+      return a.price - b.price;
+    } else if (sortOption === "price-high-low") {
+      return b.price - a.price;
+    } else if (sortOption === "name-a-z") {
+      return a.title.localeCompare(b.title);
+    } else if (sortOption === "name-z-a") {
+      return b.title.localeCompare(a.title);
+    } else {
+      return 0;
+    }
+  });
+
     return (
             <section className="products-section">
                 <div className="container">
+                    <div className="sort-dropdown">
+                        <label>Sort by: </label>
+                        <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+                        <option value="">Default</option>
+                        <option value="price-low-high">Price: Low to High</option>
+                        <option value="price-high-low">Price: High to Low</option>
+                        <option value="name-a-z">Name: A to Z</option>
+                        <option value="name-z-a">Name: Z to A</option>
+                        </select>
+                    </div>
                     <h3>Products</h3>
                     {error && <p>{error}</p>}
                     <div className='product-list'>
-                            {products.map(product => (
+                            {sortedProducts.map((product) => (
                                 <div key={product.id} className="product-card">
                                     <figure className="product-img">
                                         <img src={product.image} className="product-pic" alt='product'></img>
