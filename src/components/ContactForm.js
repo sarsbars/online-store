@@ -17,7 +17,7 @@ function ContactForm() {
               required: true,
               pattern: /^\S+@\S+$/i
             })}/>
-            {errors.Email && <div className="error-message"><span>*Email is required or invalid</span></div>}
+            {errors.Email && <div className="form-error-message"><span>*Email is required or invalid</span></div>}
             <label for='email'>Comment</label>
             <textarea 
               type='text' 
@@ -28,7 +28,7 @@ function ContactForm() {
               {...register('Meassage', {
               required: true
             })}/>
-            {errors.Meassage && <div className="error-message"><span>*Message is required</span></div>}
+            {errors.Meassage && <div className="form-error-message"><span>*Message is required</span></div>}
             <input type='submit' value='Submit'/>
           </form>
         </section>
