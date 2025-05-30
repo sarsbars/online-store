@@ -5,7 +5,6 @@ import Cart from "./pages/Cart";
 import Detail from "./pages/Detail";
 import { Routes, Route } from 'react-router-dom';
 
-
 function App() {
   return (
     <>
@@ -15,8 +14,9 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />
-            <Route exact path='/detail' element={<Detail />} />
-            <Route exact path='/notfound' element={<NotFound />} />
+            <Route path='/detail/:id' element={<Detail />} />
+            <Route path='/notfound' element={<NotFound />} />
+            <Route path='*' element={<NotFound />} /> 
           </Routes>
         </div>
       </main>

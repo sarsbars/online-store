@@ -1,72 +1,121 @@
-
 import { useState, useEffect } from 'react';
+import { Navigate, Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { FaCartPlus } from 'react-icons/fa';
 
 function Detail() {
+    const { id } = useParams(); // Get the ID from the URL
     const [mainProduct, setMainProduct] = useState(null);
     const [similarProducts, setSimilarProducts] = useState([]);
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const URL = 'https://fakestoreapi.com/products';
 
     useEffect(() => {
         const fetchProducts = async () => {
+            setIsLoading(true);
             try {
-                const [response12, response13, response14] = await Promise.all([
-                    axios.get(`${URL}/12`),
+                const productId = parseInt(id);
+                if (isNaN(productId) || productId < 1 || productId > 20) {
+                    throw new Error('Invalid product ID');
+                }
+
+                const [mainResponse, response13, response14, response12] = await Promise.all([
+                    axios.get(`${URL}/${productId}`),
                     axios.get(`${URL}/13`),
                     axios.get(`${URL}/14`),
+                    axios.get(`${URL}/12`),
                 ]);
 
-                setMainProduct(response12.data);
-                setSimilarProducts([response13.data, response14.data]);
+                setMainProduct(mainResponse.data);
+                const similar = [response13.data, response14.data, response12.data].filter(
+                    product => product && product.id && product.title && product.price && product.image
+                );
+                console.log('Similar product IDs:', similar.map(p => p.id));
+                setSimilarProducts(similar);
                 setError('');
             } catch (error) {
-                console.log(error.message);
+                console.error('Error fetching products:', error.message);
                 setMainProduct(null);
                 setSimilarProducts([]);
-                setError('Failed to load products. Please try again later.');
+                setError(error.message);
+            } finally {
+                setIsLoading(false);
             }
         };
 
         fetchProducts();
-    }, []); 
+    }, [id]);
+
+    if (error.includes('Invalid product')) {
+        return <Navigate to="/notfound" />;
+    }
 
     return (
         <section className="product-page">
-            <h2>Product Details</h2>
-            {error && <p className="error">{error}</p>}
+            {isLoading && <p>Loading...</p>}
+            {error && !isLoading && <p className="error">{error}</p>}
 
-            {mainProduct && (
-                <div className="main-product">
-                    <h3>{mainProduct.title}</h3>
-                    <figure>
-                        <img src={mainProduct.image} alt={mainProduct.title} />
-                    </figure>
-                    <p>{mainProduct.description}</p>
-                    <p><strong>Price:</strong> ${mainProduct.price}</p>
+            {mainProduct && !isLoading && (
+                <div className="main-product flex">
+                    <div className="img-container">
+                        <figure>
+                            <img
+                                className="main-product-img"
+                                src={mainProduct.image}
+                                alt={mainProduct.title}
+                            />
+                        </figure>
+                    </div>
+                    <div className="details-side">
+                        <div className="details-container">
+                            <div className="product-details">
+                                <h3>{mainProduct.title}</h3>
+                                <p>{mainProduct.description}</p>
+                            </div>
+                            <div className="add-to-cart flex">
+                                <p>
+                                    <strong>Price:</strong> ${mainProduct.price}
+                                </p>
+                                <FaCartPlus className="cart-icon" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )}
 
-            {similarProducts.length > 0 && (
-                <div className="similar-products">
+            {similarProducts.length > 0 && !isLoading && (
+                <div className="similar-products flex column-direction">
                     <h3>Similar Products</h3>
-                    <div className="similar-products-list">
+                    <div className="similar-products-list flex gap-40">
                         {similarProducts.map((product) => (
-                            <div key={product.id} className="similar-product">
-                                <h4>{product.title}</h4>
-                                <figure>
-                                    <img src={product.image} alt={product.title} />
-                                </figure>
-                                <p><strong>Price:</strong> ${product.price}</p>
-                            </div>
+                            <Link
+                                key={product.id}
+                                to={`/detail/${product.id}`} // Updated to match /detail/:id route
+                                className="similar-product-link"
+                            >
+                                <div className="similar-container">
+                                    <div className="similar-product flex column-direction">
+                                        <h4>{product.title}</h4>
+                                        <figure>
+                                            <img
+                                                className="similar-product-img"
+                                                src={product.image}
+                                                alt={product.title}
+                                            />
+                                        </figure>
+                                        <p>
+                                            <strong>Price:</strong> ${product.price}
+                                        </p>
+                                    </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
             )}
         </section>
-
     );
 }
 
 export default Detail;
-
