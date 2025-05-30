@@ -5,11 +5,11 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Detail from "./pages/Detail";
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-
+import { CartProvider } from './components/CartContext';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/online-store">
             <CartProvider>
                 <Header />
                 <main>
