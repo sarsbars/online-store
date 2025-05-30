@@ -283,9 +283,21 @@ h4 {
 }
 
 .product-card {
-    padding: 8px;
+    padding: 16px;
     border-radius: 5px;
     border: 1px solid #f7f7f7;
+}
+
+.product-img {
+    width: 100%;
+    height: 150px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        /* display: block; */
+    }
 }
 
 
