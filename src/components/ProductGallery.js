@@ -3,7 +3,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-function ProductGallery(props) {
+function ProductGallery() {
 
     const[products, setProducts] = useState([]);
     const[error, setError] = useState('');
@@ -26,15 +26,14 @@ function ProductGallery(props) {
     }, []);
 
     return (
-        <div>
             <section className="products-section">
                 <h3>Products</h3>
                 {error && <p>{error}</p>}
                 <div className='product-list'>
-                        {props.list.map(product => (
+                        {products.map(product => (
                             <div key={product.id} className="product-card">
                                 <figure className="product-img">
-                                    <img src={image} className="product-pic" alt='product'></img>
+                                    <img src={product.image} className="product-pic" alt='product'></img>
                                 </figure>
                                 <p>{product.title}</p>
                                 <p>{product.description.substring(0, 100)}...</p>
@@ -47,8 +46,6 @@ function ProductGallery(props) {
                         ))}
                 </div>
             </section>
-    
-        </div>
     );
 }
 

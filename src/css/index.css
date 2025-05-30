@@ -272,6 +272,16 @@ h4 {
     margin-bottom: 24px;
 }
 
+/*----------------------product-gallery-------------------*/
+
+.product-list {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-gap: 20px;
+    border-radius: 4px;
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*                  404 Not Found                      */
