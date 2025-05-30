@@ -5,7 +5,7 @@ function Header() {
         <header>
             <div className="container flex space-between">
                 <div className="title flex">
-                    <h1>FurniSure</h1>
+                    <h1>Cartsy</h1>
                     <div className="flex center search-bar">
                         <input type="text" placeholder="Search" className='search-bar-input' />
                     </div>

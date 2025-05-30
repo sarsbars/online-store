@@ -10,6 +10,7 @@ body {
 
 :root {
   --primary-green: #00585c;
+  --primary-green-dark: #003b3e;
   --on-primary-green: #f5ffff;
   --primary-orange: #dc9400;
   --primary-orange-dark: #996600;
@@ -96,10 +97,11 @@ h1 {
     right: 2px;
     line-height: 20px;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     font-weight: 500;
     place-content: center;
+    text-transform: uppercase;
 }
   
 nav .nav-list {
@@ -188,7 +190,7 @@ nav .nav-list li {
 
 .overlay {
     padding: 24px;
-    background-color: rgb(255 255 255 / 20%);
+    background-color: rgb(255 255 255 / 15%);
     backdrop-filter: blur(7px);
     border: 1px solid rgb(255 255 255 / 5%);
     width: 50%;
@@ -347,7 +349,7 @@ h4 {
         width: 100%;
         padding: 8px;
         color: #000;
-        border-radius: 8px;
+        border-radius: 6px;
         border: 1px solid #ededed;
 
         &:focus {
@@ -370,7 +372,7 @@ h4 {
         border: 1px solid #ededed;
         width: 100%;
         padding: 8px;
-        border-radius: 8px;
+        border-radius: 6px;
 
              &:focus {
             border: 1px solid var(--primary-green);
@@ -382,12 +384,12 @@ h4 {
         padding: var(--button-padding);
         border-radius: var(--button-radius);
         color: #fff;
-        background-color: var(--primary-orange);
+        background-color: var(--primary-green);
         font-weight: 600;
         margin-top: 32px;
 
         &:hover {
-            background-color: var(--primary-orange-dark);
+            background-color: var(--primary-green-dark);
             transition: background-color 0.25s ease-in-out;
         }
     }
@@ -410,6 +412,12 @@ h4 {
     font-size: 5rem;
     font-weight: 600;
     color: #fff;
+}
+
+.small-banner-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
