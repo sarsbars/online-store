@@ -7,7 +7,7 @@ function Header() {
                 <div className="title flex">
                     <h1>FurniSure</h1>
                     <div className="flex center search-bar">
-                        <input type="text" placeholder="Search" />
+                        <input type="text" placeholder="Search" className='search-bar-input' />
                     </div>
                 </div>
                 <nav className="flex gap-80 align-items">
