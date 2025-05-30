@@ -26,18 +26,18 @@ function ProductGallery() {
         fetchProduct();
     }, []);
 
-      const sortedProducts = [...products].sort((a, b) => {
-    if (sortOption === "price-low-high") {
-      return a.price - b.price;
-    } else if (sortOption === "price-high-low") {
-      return b.price - a.price;
-    } else if (sortOption === "name-a-z") {
-      return a.title.localeCompare(b.title);
-    } else if (sortOption === "name-z-a") {
-      return b.title.localeCompare(a.title);
-    } else {
-      return 0;
-    }
+    const sortedProducts = [...products].sort((a, b) => {
+        if (sortOption === "price-low-high") {
+        return a.price - b.price;
+        } else if (sortOption === "price-high-low") {
+        return b.price - a.price;
+        } else if (sortOption === "name-a-z") {
+        return a.title.localeCompare(b.title);
+        } else if (sortOption === "name-z-a") {
+        return b.title.localeCompare(a.title);
+        } else {
+        return 0;
+        }
   });
 
     return (
