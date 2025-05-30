@@ -35,7 +35,7 @@ function ProductGallery() {
                                 <figure className="product-img">
                                     <img src={product.image} className="product-pic" alt='product'></img>
                                 </figure>
-                                <p>{product.title}</p>
+                                <h4>{product.title}</h4>
                                 <p>{product.description.substring(0, 100)}...</p>
                                 <div className="rating">
                                     {[...Array(Math.round(product.rating.rate))].map((_, i) => (
