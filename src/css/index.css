@@ -398,6 +398,20 @@ h4 {
     font-size: 1.3rem;
 }
 
+
+/*------------------small banner------------------------*/
+
+.small-banner {
+    height: 300px;
+    background: #fff url(../img/small-banner2.jpg) center center / cover no-repeat;
+}
+
+.small-banner-title {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*                  404 Not Found                      */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
