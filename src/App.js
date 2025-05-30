@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Detail from "./pages/Detail";
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import HeroBanner from "./components/HeroBanner";
 import { CartProvider } from './components/CartContext';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <CartProvider>
                 <Header />
                 <main>
+                <HeroBanner />
                     <div className="container">
                         <Routes>
                             <Route path="/" element={<Home />} />
