@@ -238,8 +238,13 @@ h3 {
     text-align: center;
 }
 
-section {
+section:nth-child(1){
     margin: 40px 0;
+}
+
+section {
+    padding: 60px 0;
+    margin-bottom: 60px;
 }
 
 
@@ -274,6 +279,10 @@ section {
 
 /*----------------------product-gallery-------------------*/
 
+.products-section {
+    background-color: #f4f4f4;
+}
+
 .product-list {
     margin: 40px 0;
     display: grid;
@@ -285,7 +294,7 @@ section {
 .product-card {
     padding: 16px;
     border-radius: 5px;
-    border: 1px solid #f7f7f7;
+    background-color: #fff;
 }
 
 .product-img {
@@ -300,9 +309,21 @@ section {
     }
 }
 
-h4 {
-    font-size: 1.7rem;
-    text-align: center;
+.product-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--primary-green);
+    }
+}
+
+.star {
+    font-size: 12px;
+    color: #ffc107;
 }
 
 

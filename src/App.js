@@ -19,7 +19,6 @@ function App() {
         <div className="container">
           <Stats />
           <WhatWeOffer />
-          <ProductGallery />
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />
@@ -27,6 +26,7 @@ function App() {
             <Route exact path='/notfound' element={<NotFound />} />
           </Routes>
         </div>
+          <ProductGallery />
       </main>
     </>
   );
