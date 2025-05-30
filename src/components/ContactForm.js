@@ -6,10 +6,11 @@ function ContactForm() {
     return(
         <section className="flex column-direction center">
           <h3>Need help? Contact Us</h3>
-          <form onSubmit={handleSubmit(onSubmit)} className="contact-form flex column-direction gap-20 center">
-            <label>Email</label>
+          <form onSubmit={handleSubmit(onSubmit)} className="contact-form flex column-direction">
+            <label for='email'>Email</label>
             <input 
               type='text' 
+              name='email'
               className='email-input'
               placeholder='Johnsmith@email.com'
               {...register('Email', {
@@ -17,8 +18,10 @@ function ContactForm() {
               pattern: /^\S+@\S+$/i
             })}/>
             {errors.Email && <div className="error-message"><span>*Email is required or invalid</span></div>}
+            <label for='email'>Comment</label>
             <textarea 
               type='text' 
+              name='message'
               rows={10}
               cols={30}
               placeholder='Type your message'
