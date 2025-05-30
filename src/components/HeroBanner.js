@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+
 function HeroBanner() {
     return(
         <div className="hero-banner">
@@ -5,10 +9,7 @@ function HeroBanner() {
                 <div className="overlay">
                     <h2>Everything You Need. Delivered with Style.</h2>
                     <p>Top picks. Great prices. Fast delivery.</p>
-                    <div className="button-container">
-                        <button className="sign-up">Sign Up</button>
-                        <button className="shop-now">Shop now</button>
-                    </div>
+                    <button className="shop-now">Shop now <FontAwesomeIcon icon={faArrowRight} className='shop-now-icon' /></button>
                 </div>
             </div>
         </div>
