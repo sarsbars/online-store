@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import HeroBanner from "./components/HeroBanner";
 import Stats from "./components/Stats";
 import WhatWeOffer from "./components/WhatWeOffer";
+import ProductGallery from "./components/ProductGallery";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route exact path='/notfound' element={<NotFound />} />
           </Routes>
         </div>
+          <ProductGallery />
       </main>
     </>
   );
