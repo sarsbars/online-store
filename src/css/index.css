@@ -314,6 +314,20 @@ figure {
     color: var(--primary-green);
 }
 
+.cart-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.cart-button:hover .cart-icon {
+    color: var(--primary-orange); 
+    transition: color 0.25s ease-in-out;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*      Product Detail Page - Similar Products         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -382,4 +396,67 @@ figure {
 .similar-product-link h4 {
     color: inherit; 
     text-decoration: none; 
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                    Cart Page                        */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.cart-page {
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cart-items {
+    gap: 20px;
+}
+
+.cart-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 10px 5px 5px #c4c4c4;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details h4 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+}
+
+.cart-item-details p {
+    font-size: 1.6rem;
+    margin: 5px 0;
+}
+
+.remove-button {
+    background-color: var(--primary-orange);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.remove-button:hover {
+    background-color: var(--primary-orange-dark);
+    transition: background-color 0.25s ease-in-out;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 600;
 }

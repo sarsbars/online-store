@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { Navigate, Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FaCartPlus } from 'react-icons/fa';
+import { useCart } from '../components/CartContext';
 
 function Detail() {
-    const { id } = useParams(); // Get the ID from the URL
+    const { id } = useParams();
+    const { addToCart } = useCart();
     const [mainProduct, setMainProduct] = useState(null);
     const [similarProducts, setSimilarProducts] = useState([]);
     const [error, setError] = useState('');
@@ -47,6 +49,13 @@ function Detail() {
         fetchProducts();
     }, [id]);
 
+    const handleAddToCart = () => {
+        if (mainProduct) {
+            addToCart(mainProduct);
+            console.log(`Added to cart: ${mainProduct.title}`);
+        }
+    };
+
     if (error.includes('Invalid product')) {
         return <Navigate to="/notfound" />;
     }
@@ -75,9 +84,11 @@ function Detail() {
                             </div>
                             <div className="add-to-cart flex">
                                 <p>
-                                    <strong>Price:</strong> ${mainProduct.price}
+                                    <strong>Price:</strong> ${mainProduct.price.toFixed(2)}
                                 </p>
-                                <FaCartPlus className="cart-icon" />
+                                <button onClick={handleAddToCart} className="cart-button">
+                                    <FaCartPlus className="cart-icon" />
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -91,7 +102,7 @@ function Detail() {
                         {similarProducts.map((product) => (
                             <Link
                                 key={product.id}
-                                to={`/detail/${product.id}`} // Updated to match /detail/:id route
+                                to={`/detail/${product.id}`}
                                 className="similar-product-link"
                             >
                                 <div className="similar-container">
@@ -105,7 +116,7 @@ function Detail() {
                                             />
                                         </figure>
                                         <p>
-                                            <strong>Price:</strong> ${product.price}
+                                            <strong>Price:</strong> ${product.price.toFixed(2)}
                                         </p>
                                     </div>
                                 </div>
