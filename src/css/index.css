@@ -282,6 +282,12 @@ h4 {
     border-radius: 4px;
 }
 
+.product-card {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #f7f7f7;
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*                  404 Not Found                      */
