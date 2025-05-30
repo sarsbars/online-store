@@ -3,30 +3,33 @@ import { faTruckFast, faBagShopping, faClock, faRightLeft } from '@fortawesome/f
 
 function WhatWeOffer() {
     return (
-        <section className='flex space-between'>
-            <div className="box">
-                <div className="icon-circle">
-                    <FontAwesomeIcon icon={faTruckFast} className='icon'/>
+        <section>
+            <h4>What we offer</h4>
+            <div className='flex space-between'>
+                <div className="box flex column-direction center gap-20">
+                    <div className="icon-circle">
+                        <FontAwesomeIcon icon={faTruckFast} className='icon'/>
+                    </div>
+                    <p>Fast and free shipping</p>
                 </div>
-                <p>Fast and free shipping</p>
-            </div>
-            <div className="box">
-                <div className="icon-circle">
-                    <FontAwesomeIcon icon={faBagShopping} className='icon'/>
+                <div className="box flex column-direction center gap-20">
+                    <div className="icon-circle">
+                        <FontAwesomeIcon icon={faBagShopping} className='icon'/>
+                    </div>
+                    <p>Easy to shop</p>
                 </div>
-                <p>Easy to shop</p>
-            </div>
-            <div className="box">
-                <div className="icon-circle">
-                    <FontAwesomeIcon icon={faClock} className='icon'/>
+                <div className="box flex column-direction center gap-20">
+                    <div className="icon-circle">
+                        <FontAwesomeIcon icon={faClock} className='icon'/>
+                    </div>
+                    <p>24/7 support</p>
                 </div>
-                <p>24/7 support</p>
-            </div>
-            <div className="box">
-                <div className="icon-circle">
-                    <FontAwesomeIcon icon={faRightLeft} className='icon'/>
+                <div className="box flex column-direction center gap-20">
+                    <div className="icon-circle">
+                        <FontAwesomeIcon icon={faRightLeft} className='icon'/>
+                    </div>
+                    <p>Hassle free returns</p>
                 </div>
-                <p>Hassle free returns</p>
             </div>
         </section>
     );
