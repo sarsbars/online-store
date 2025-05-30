@@ -43,6 +43,8 @@ function ProductGallery() {
     return (
             <section className="products-section">
                 <div className="container">
+                    <h3>Products</h3>
+                    {error && <p>{error}</p>}
                     <div className="sort-dropdown">
                         <label>Sort by: </label>
                         <select value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
@@ -53,8 +55,6 @@ function ProductGallery() {
                         <option value="name-z-a">Name: Z to A</option>
                         </select>
                     </div>
-                    <h3>Products</h3>
-                    {error && <p>{error}</p>}
                     <div className='product-list'>
                             {sortedProducts.map((product) => (
                                 <div key={product.id} className="product-card">

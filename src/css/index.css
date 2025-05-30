@@ -270,12 +270,12 @@ section {
     width: 200px;
 }
 
-/* h4 {
+h4 {
     font-size: 3rem;
     color: var(--primary-green);
     text-align: center;
     margin-bottom: 24px;
-} */
+}
 
 /*----------------------product-gallery-------------------*/
 
@@ -324,6 +324,13 @@ section {
 .star {
     font-size: 12px;
     color: #ffc107;
+}
+
+.sort-dropdown select {
+  padding: 5px 5px;
+  color: var(--primary-green);
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 
