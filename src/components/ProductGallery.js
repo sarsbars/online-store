@@ -37,10 +37,15 @@ function ProductGallery() {
                                 </figure>
                                 <h4>{product.title}</h4>
                                 <p>{product.description.substring(0, 100)}...</p>
-                                <div className="rating">
-                                    {[...Array(Math.round(product.rating.rate))].map((_, i) => (
-                                        <FontAwesomeIcon icon={faStar} className="star" key={i} />
-                                    ))}
+                                <div className="price-rating flex space-between">
+                                    <div>
+                                        <p>${product.price}</p>
+                                    </div>
+                                    <div className="rating">
+                                        {[...Array(Math.round(product.rating.rate))].map((_, i) => (
+                                            <FontAwesomeIcon icon={faStar} className="star" key={i} />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         ))}
