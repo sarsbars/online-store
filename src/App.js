@@ -8,6 +8,7 @@ import HeroBanner from "./components/HeroBanner";
 import Stats from "./components/Stats";
 import WhatWeOffer from "./components/WhatWeOffer";
 import ProductGallery from "./components/ProductGallery";
+import ContactForm from "./components/ContactForm";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           </Routes>
         </div>
           <ProductGallery />
+          <ContactForm />
       </main>
     </>
   );
