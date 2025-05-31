@@ -1,6 +1,6 @@
 # Online Store 🛒
 
-This is an online store web application built with React, utilizing the FakeStore API to create a dynamic e-commerce experience. This project was developed as the final project for the Introduction to React course (SD-260) at Manitoba Institute of Trades and Technology, representing 40% of the course grade. The application features a responsive design inspired by professional e-commerce websites.
+This is an online store web application built with React, utilizing the FakeStore API to create a dynamic e-commerce experience. This project was developed as the final project for the Introduction to React course (SD-260) at Manitoba Institute of Trades and Technology. The application features a responsive design inspired by professional e-commerce websites.
 
 ## Project Features
 - **Multiple Pages**: Includes four core pages: Home, Product (Detail), Cart, and NotFound (404 page), built using React components for modularity.
