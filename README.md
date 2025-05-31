@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Online Store 🛒
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an online store web application built with React, utilizing the FakeStore API to create a dynamic e-commerce experience. This project was developed as the final project for the Introduction to React course (SD-260) at Manitoba Institute of Trades and Technology, representing 40% of the course grade. The application features a responsive design inspired by professional e-commerce websites.
 
-## Available Scripts
+## Project Features
+- **Multiple Pages**: Includes four core pages: Home, Product (Detail), Cart, and NotFound (404 page), built using React components for modularity.
+- **FakeStore API Integration**: Fetches product data dynamically using `axios` from `https://fakestoreapi.com` to populate the store’s inventory.
+- **Product Sorting**: The Home page allows users to sort products by price (low to high, high to low) and name (A-Z, Z-A) via a dropdown menu.
+- **Product Detail Page**: Displays detailed product information, including image, title, description, price, and an "Add to Cart" button, with a gallery of three similar products below.
+- **Cart Functionality**: Utilizes a `CartProvider` context to manage cart state across the application, allowing users to add products to the cart.
+- **Routing**: Implements `react-router-dom` for navigation, with proper route management and redirection to the NotFound page for invalid routes or product IDs.
+- **Professional Design**: Incorporates `framer-motion` for smooth page transitions and a responsive layout inspired by [Behance E-Commerce Furniture Website Design](https://www.behance.net/gallery/226078053/E-Commerce-Furniture-Website-Design) and [Dribbble Furniture E-Commerce Website Design](https://dribbble.com/shots/25501129-Furniture-E-Commerce-Website-Design).
+- **Component-Based Architecture**: Utilizes reusable components such as `Header`, `HeroBanner`, `ProductGallery`, `Stats`, `WhatWeOffer`, `ContactForm`, and more for a modular structure.
+- **Hosted on GitHub Pages**: The site is deployed at [https://sarsbars.github.io/online-store/](https://sarsbars.github.io/online-store/).
 
-In the project directory, you can run:
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript (JSX)
+- React
+- React Router (`react-router-dom`)
+- Axios
+- Framer Motion
+- Font Awesome (for star ratings)
+- React Icons (for cart icon)
+- Markdown
+- GitHub Pages
 
-### `npm start`
+## Project Structure
+- `src/`
+  - `components/`
+    - `Header.js`: Navigation bar for the application.
+    - `HeroBanner.js`: Promotional banner on the Home page.
+    - `ProductGallery.js`: Displays and sorts products fetched from the FakeStore API.
+    - `Stats.js`: Highlights key store statistics.
+    - `WhatWeOffer.js`: Describes store offerings.
+    - `ContactForm.js`: User contact form.
+    - `CartContext.js`: Manages cart state across the application.
+  - `pages/`
+    - `Home.js`: Main page with product gallery and other components.
+    - `Detail.js`: Product detail page with similar products gallery.
+    - `Cart.js`: Displays cart contents.
+    - `NotFound.js`: 404 page for invalid routes.
+  - `css/index.css`: Global styles for the application.
+  - `App.js`: Main app component with routing and context provider.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requirements
+- Node.js v16 or higher
+- npm v8 or higher
+- Internet connection for fetching data from the FakeStore API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Team Contributions
+- **Sarah Mitchell (Team Lead)**: Developed `Detail.js`, `NotFound.js`, and `Cart.js`, and oversaw project coordination and deployment.
+- **Ashedzi Solomon**: Designed the Home page and overall UI, focusing on components like `Home.js`, `HeroBanner.js`, `Stats.js`, `WhatWeOffer.js`, and `ContactForm.js`.
