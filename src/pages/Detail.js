@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navigate, Link, useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { FaCartPlus } from 'react-icons/fa';
 import { useCart } from '../components/CartContext';
@@ -80,7 +82,16 @@ function Detail() {
             <div className="details-container">
               <div className="product-details">
                 <h3>{mainProduct.title}</h3>
-                <p>{mainProduct.description}</p>
+                <div className='about-item'>
+                  <h4>About this Item</h4>
+                  <p>{mainProduct.description}</p>
+                </div>
+                <div className="rating flex">
+                  <p>Rating:</p>
+                    {[...Array(Math.round(mainProduct.rating.rate))].map((_, i) => (
+                      <FontAwesomeIcon icon={faStar} className="star" key={i} />
+                    ))}
+                </div>
               </div>
               <div className="add-to-cart flex">
                 <p>
