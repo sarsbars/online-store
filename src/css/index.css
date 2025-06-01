@@ -454,44 +454,32 @@ h4 {
 /*                  404 Not Found                      */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-.left {
-    margin-left: 600px;
-}
 .error-message {
     background-color: var(--primary-green);
     border-radius: var(--button-radius);
     width: 700px;
-    margin: 20px auto;
     padding: 40px;
     color: var(--on-primary-green);
-    box-sizing: border-box;
-    text-align: center;
 }
 
 .not-found {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 700;
-    margin: 0;
 }
 
 .frown-icon {
     font-size: 20rem;
     color: var(--primary-orange-dark);
-    margin: 1rem 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .couldnt-find {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 500;
-    padding-top: 40px;
-    margin: 0;
+    margin-top: 18px;
 }
 
 .back-home {
-    margin: 60px 0 20px 0;
+    margin-top: 40px;
     background-color: var(--primary-orange);
     color: var(--on-primary-green);
     border-radius: var(--button-radius);
