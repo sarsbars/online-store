@@ -721,9 +721,7 @@ figure {
 }
 
 .aside-container {
-    padding: 24px;
     width: 30%;
-    border: 1px solid #000;
 }
 
 .aside-title {
@@ -770,4 +768,36 @@ figure {
     margin-top: 20px;
     font-size: 2rem;
     font-weight: 600;
+}
+
+.subtotal-container button {
+    margin-top: 8px;
+    padding: var(--button-padding);
+    border-radius: var(--button-radius);
+    background-color: var(--primary-green);
+    color: var(--on-primary-green);
+
+    &:hover {
+        background-color: var(--primary-green-dark);
+        transition: background-color 0.25s ease-in-out;
+    }
+}
+
+.bottom-subtotal-container, .subtotal-container {
+    border: 1px solid #ebebeb;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.bottom-subtotal-container figure {
+    width: 100%;
+}
+
+.terms-apply {
+    p {
+        font-size: 1rem;
+        color: #000;
+        line-height: 1.2;
+        cursor: pointer;
+    }
 }
