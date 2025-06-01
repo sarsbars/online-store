@@ -92,7 +92,7 @@ function Detail() {
                   <p className='persons-bought'><span>100+ people</span> bought in the last 1 month</p>
                   <p className='price'>${mainProduct.price.toFixed(2)}</p>
                   <p className='promo'>
-                    Get $60 off your order instantly: Pay $0.00 $54.99 if approved for the Cartsy.ca Rewards 
+                    Get $60 off your order instantly: Pay $0.00 <span>${mainProduct.price.toFixed(2)}</span> if approved for the Cartsy.ca Rewards 
                     Mastercard. No annual fee. Conditions apply.
                   </p>
                 </div>
@@ -121,24 +121,21 @@ function Detail() {
                 >
                   <div className="similar-container">
                     <div className="similar-product flex column-direction">
-                      <h4>{product.title}</h4>
                       <figure>
                         <img
                           className="similar-product-img"
                           src={product.image}
                           alt={product.title}
-                        />
+                          />
                       </figure>
-                      {/* <p>
-                        <strong>Price:</strong> ${product.price.toFixed(2)}
-                      </p> */}
+                      <h4>{product.title.substring(0, 50)}...</h4>
                       <div className="product-price-rating flex space-between">
                         <div>
                           <p>${product.price.toFixed(2)}</p>
                         </div>
                         <div className="rating">
                           {[...Array(Math.round(product.rating.rate))].map((_, i) => (
-                            <FontAwesomeIcon icon={faStar} className="star" key={i} />
+                            <FontAwesomeIcon icon={faStar} className="details-star" key={i} />
                           ))}
                       </div>
                     </div>
