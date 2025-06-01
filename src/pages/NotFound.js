@@ -1,20 +1,21 @@
 import { NavLink } from 'react-router-dom';
-
+import { FaFrown } from 'react-icons/fa';
 
 function NotFound() {
-    return (
-        <section className='error-message column-direction center container flex'>
-            <h2 className='not-found'>404 Not Found </h2>
-              <p className='couldnt-find'>
-                We're sorry, the page you are looking for cannot be found.
-              </p>
-              <NavLink className='back-home' to='/'>
-                Back to Home
-            </NavLink>
-        </section>
-    );
+  return (
+    <div className="container center left">
+      <section className="error-message flex column-direction center">
+        <h2 className="not-found">404 Not Found</h2>
+        <FaFrown className="frown-icon" />
+        <p className="couldnt-find">
+          We're sorry, the page you are looking for cannot be found.
+        </p>
+        <NavLink className="back-home" to="/">
+          Back to Home
+        </NavLink>
+      </section>
+    </div>
+  );
 }
 
 export default NotFound;
-
-//NEED TO ADD LINK BACK TO HOME
