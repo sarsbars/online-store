@@ -81,22 +81,23 @@ function Detail() {
             </div>
             <div className="details-container">
               <div className="product-details">
-                <h3>{mainProduct.title}</h3>
-                <div className='about-item'>
-                  <h4>About this Item</h4>
-                  <p>{mainProduct.description}</p>
-                </div>
-                <div className="rating flex">
-                  <p>Rating:</p>
+                <div>
+                  <h3>{mainProduct.title}</h3>
+                  <div className="rating flex align-items">
+                    <p className='rating-text'>Rating: </p>
                     {[...Array(Math.round(mainProduct.rating.rate))].map((_, i) => (
                       <FontAwesomeIcon icon={faStar} className="star" key={i} />
                     ))}
+                  </div>
+                  <p className='persons-bought'><span>100+ people</span> bought in the last 1 month</p>
+                  <p className='price'>${mainProduct.price.toFixed(2)}</p>
+                </div>
+                <div>
+                  <h4 className='about-item'>About this Item</h4>
+                  <p>{mainProduct.description}</p>
                 </div>
               </div>
               <div className="add-to-cart flex">
-                <p>
-                  <strong>Price:</strong> ${mainProduct.price.toFixed(2)}
-                </p>
                 <button onClick={handleAddToCart} className="cart-button">
                   <FaCartPlus className="cart-icon" />
                 </button>

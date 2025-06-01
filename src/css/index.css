@@ -501,14 +501,9 @@ h4 {
 }
 
 .img-container {
-    /* background-color: #fff; */
     width: 460px;
     height: 550px;
     border-radius: 20px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
     padding: 20px;
 }
 
@@ -549,15 +544,37 @@ figure {
 }
 
 .product-details h3 {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 2.5rem;
-    word-wrap: break-word; 
+    line-height: 1.2;
+    text-align: left;
 }
 
-.product-details p {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    word-wrap: break-word; 
+.about-item {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* .product-details p {
+    font-size: 1.4rem;
+} */
+
+.rating-text {
+    margin-right: 8px;
+    font-size: 1.4rem;
+}
+
+.persons-bought {
+    font-size: 1.4rem;
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.price {
+    font-size: 4rem;
 }
 
 .add-to-cart {
