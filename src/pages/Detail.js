@@ -100,6 +100,7 @@ function Detail() {
                   <h4 className='about-item'>About this Item</h4>
                   <p className='description-text'>{mainProduct.description}</p>
                   <button onClick={handleAddToCart} className="cart-button">
+                    Add to cart
                     <FaCartPlus className="cart-icon" />
                 </button>
                 </div>
@@ -128,9 +129,19 @@ function Detail() {
                           alt={product.title}
                         />
                       </figure>
-                      <p>
+                      {/* <p>
                         <strong>Price:</strong> ${product.price.toFixed(2)}
-                      </p>
+                      </p> */}
+                      <div className="product-price-rating flex space-between">
+                        <div>
+                          <p>${product.price.toFixed(2)}</p>
+                        </div>
+                        <div className="rating">
+                          {[...Array(Math.round(product.rating.rate))].map((_, i) => (
+                            <FontAwesomeIcon icon={faStar} className="star" key={i} />
+                          ))}
+                      </div>
+                    </div>
                     </div>
                   </div>
                 </Link>
