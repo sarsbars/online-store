@@ -552,13 +552,10 @@ figure {
 
 .about-item {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: left;
+    margin-top: 24px;
 }
-
-/* .product-details p {
-    font-size: 1.4rem;
-} */
 
 .rating-text {
     margin-right: 8px;
@@ -573,21 +570,23 @@ figure {
     }
 }
 
+.promo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #777;
+}
+
 .price {
     font-size: 4rem;
 }
 
-.add-to-cart {
-    gap: 80px;
-    background-color: #fff;
-    border: 2px solid var(--primary-green);
-    border-radius: 15px;
-    width: 100%; 
-    box-sizing: border-box; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 10px 20px; 
+.description-text {
+    font-size: 1.6rem;
+}
+
+.about-item-container {
+    margin-top: 16px;
+    border-top: 1px solid #d7d7d7;
 }
 
 .cart-icon {

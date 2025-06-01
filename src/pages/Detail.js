@@ -91,16 +91,18 @@ function Detail() {
                   </div>
                   <p className='persons-bought'><span>100+ people</span> bought in the last 1 month</p>
                   <p className='price'>${mainProduct.price.toFixed(2)}</p>
+                  <p className='promo'>
+                    Get $60 off your order instantly: Pay $0.00 $54.99 if approved for the Cartsy.ca Rewards 
+                    Mastercard. No annual fee. Conditions apply.
+                  </p>
                 </div>
-                <div>
+                <div className='about-item-container'>
                   <h4 className='about-item'>About this Item</h4>
-                  <p>{mainProduct.description}</p>
-                </div>
-              </div>
-              <div className="add-to-cart flex">
-                <button onClick={handleAddToCart} className="cart-button">
-                  <FaCartPlus className="cart-icon" />
+                  <p className='description-text'>{mainProduct.description}</p>
+                  <button onClick={handleAddToCart} className="cart-button">
+                    <FaCartPlus className="cart-icon" />
                 </button>
+                </div>
               </div>
             </div>
           </div>
