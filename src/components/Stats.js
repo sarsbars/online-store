@@ -1,7 +1,7 @@
 function Stats() {
     return (
-        <section>
-            <div className="container flex space-between">
+        <section className="container">
+            <div className="flex space-between">
                 <div className="stats-box">
                     <h4>2000+</h4>
                     <p>Happy Clients</p>

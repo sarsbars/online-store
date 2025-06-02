@@ -4,7 +4,7 @@ import { faTruckFast, faBagShopping, faClock, faRightLeft } from '@fortawesome/f
 function WhatWeOffer() {
     return (
         <section>
-            <div className='container'>
+            <div className="container">
                 <h3>What we offer</h3>
                 <div className='flex space-between'>
                     <div className="box flex column-direction center gap-20">

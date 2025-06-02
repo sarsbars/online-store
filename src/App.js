@@ -1,5 +1,6 @@
 import './css/index.css'
 import Header from "./components/Header";
+import Footer from './components/Footer';
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -21,6 +22,7 @@ function App() {
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                 </main>
+                <Footer />
             </CartProvider>
         </BrowserRouter>
     );
