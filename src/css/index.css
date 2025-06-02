@@ -370,7 +370,7 @@ h4 {
     margin-top: 20px;
     width: 30%;
     padding: 4px 24px 24px 24px;
-    border: 1px solid #dddddd;
+    box-shadow:  0 0 2px rgba(0, 0, 0, 0.10);
     border-radius: 8px;
 
     .email-input {
@@ -693,14 +693,13 @@ figure {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .cart-page {
-    /* background-color: #f0f0f0; */
-    /* min-height: 100vh; */
     padding: 20px;
 }
 
 .cart-title {
     font-size: 3rem;
     font-weight: 600;
+    margin-bottom: 24px;
 }
 
 .cart-items {
@@ -708,10 +707,10 @@ figure {
 }
 
 .cart-item {
+    box-shadow:  0 0 8px rgba(0, 0, 0, 0.10);
+    padding: 16px;
+    border-radius: 5px;
     background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 10px 5px 5px #c4c4c4;
     align-items: center;
     gap: 20px;
 }
@@ -784,7 +783,7 @@ figure {
 }
 
 .bottom-subtotal-container, .subtotal-container {
-    border: 1px solid #ebebeb;
+    box-shadow:  0 0 8px rgba(0, 0, 0, 0.10);
     padding: 16px;
     border-radius: 5px;
 }
