@@ -270,20 +270,24 @@ section {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--primary-green);
+    background-color: var(--on-primary-green);
     display: grid;
     place-content: center;
 }
 
 .icon {
-    color: #fff;
+    color: var(--primary-green);
 }
 
 .box {
     border-radius: 25px;
-    border: 1px solid var(--primary-green);
+    background-color: var(--primary-green);
     padding: 16px;
     width: 200px;
+
+    p {
+        color: var(--on-primary-green);
+    }
 }
 
 h4 {
@@ -783,7 +787,7 @@ figure {
 }
 
 .bottom-subtotal-container, .subtotal-container {
-    box-shadow:  0 0 8px rgba(0, 0, 0, 0.10);
+    box-shadow:  0 0 2px rgba(0, 0, 0, 0.10);
     padding: 16px;
     border-radius: 5px;
 }
