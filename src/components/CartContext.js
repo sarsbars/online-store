@@ -21,8 +21,26 @@ export function CartProvider({ children }) {
         setCartItems((prevItems) => prevItems.filter((item) => item.id !== productId));
     };
 
+    const increaseQuantity = (productId) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+            )
+        );
+    };
+
+    const decreaseQuantity = (productId) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === productId && item.quantity > 1
+                    ? { ...item, quantity: item.quantity - 1 }
+                    : item
+            )
+        );
+    };
+
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, increaseQuantity, decreaseQuantity }}>
             {children}
         </CartContext.Provider>
     );
