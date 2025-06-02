@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navigate, Link, useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { FaCartPlus } from 'react-icons/fa';
 import { useCart } from '../components/CartContext';
@@ -79,16 +81,29 @@ function Detail() {
             </div>
             <div className="details-container">
               <div className="product-details">
-                <h3>{mainProduct.title}</h3>
-                <p>{mainProduct.description}</p>
-              </div>
-              <div className="add-to-cart flex">
-                <p>
-                  <strong>Price:</strong> ${mainProduct.price.toFixed(2)}
-                </p>
-                <button onClick={handleAddToCart} className="cart-button">
-                  <FaCartPlus className="cart-icon" />
+                <div>
+                  <h3>{mainProduct.title}</h3>
+                  <div className="rating flex align-items">
+                    <p className='rating-text'>Rating: </p>
+                    {[...Array(Math.round(mainProduct.rating.rate))].map((_, i) => (
+                      <FontAwesomeIcon icon={faStar} className="star" key={i} />
+                    ))}
+                  </div>
+                  <p className='persons-bought'><span>100+ people</span> bought in the last 1 month</p>
+                  <p className='price'>${mainProduct.price.toFixed(2)}</p>
+                  <p className='promo'>
+                    Get $60 off your order instantly: Pay $0.00 <span>${mainProduct.price.toFixed(2)}</span> if approved for the Cartsy.ca Rewards 
+                    Mastercard. No annual fee. Conditions apply.
+                  </p>
+                </div>
+                <div className='about-item-container'>
+                  <h4 className='about-item'>About this Item</h4>
+                  <p className='description-text'>{mainProduct.description}</p>
+                  <button onClick={handleAddToCart} className="cart-button">
+                    Add to cart
+                    <FaCartPlus className="cart-icon" />
                 </button>
+                </div>
               </div>
             </div>
           </div>
@@ -106,17 +121,24 @@ function Detail() {
                 >
                   <div className="similar-container">
                     <div className="similar-product flex column-direction">
-                      <h4>{product.title}</h4>
                       <figure>
                         <img
                           className="similar-product-img"
                           src={product.image}
                           alt={product.title}
-                        />
+                          />
                       </figure>
-                      <p>
-                        <strong>Price:</strong> ${product.price.toFixed(2)}
-                      </p>
+                      <h4>{product.title.substring(0, 50)}...</h4>
+                      <div className="product-price-rating flex space-between">
+                        <div>
+                          <p>${product.price.toFixed(2)}</p>
+                        </div>
+                        <div className="rating">
+                          {[...Array(Math.round(product.rating.rate))].map((_, i) => (
+                            <FontAwesomeIcon icon={faStar} className="details-star" key={i} />
+                          ))}
+                      </div>
+                    </div>
                     </div>
                   </div>
                 </Link>
