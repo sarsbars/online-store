@@ -51,4 +51,4 @@ This is an online store web application built with React, utilizing the FakeStor
 
 ## Team Contributions
 - **Sarah Mitchell (Team Lead)**: Developed `Detail.js`, `NotFound.js`, and `Cart.js`, and oversaw project coordination and deployment.
-- **Ashedzi Solomon**: Designed the Home page and overall UI, focusing on components like `Home.js`, `HeroBanner.js`, `Stats.js`, `WhatWeOffer.js`, and `ContactForm.js`.
+- **Ashedzi Solomon**: Designed the Home page and overall UI, edited and fixed designs for every single element, and did all the coding on components like `Home.js`, `HeroBanner.js`, `Stats.js`, `WhatWeOffer.js`, and `ContactForm.js`.
