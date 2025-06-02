@@ -804,3 +804,16 @@ figure {
         cursor: pointer;
     }
 }
+
+.quantity-controller {
+    margin: 8px 0 24px 0;
+    padding: 4px;
+    border-radius: 50px;
+    box-shadow:  0 0 4px rgba(0, 0, 0, 0.10);
+    width: fit-content;
+
+    button {
+        padding: 8px 18px;
+        border-radius: 50%;
+    }
+}

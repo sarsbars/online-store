@@ -27,7 +27,7 @@ function Cart() {
                                             <h4>{item.title}</h4>
                                             <p><strong>Price:</strong> ${item.price}</p>
                                             <p><strong>Quantity:</strong> {item.quantity}</p>
-                                            <div className="quantity-controller flex gap-8">
+                                            <div className="quantity-controller flex align-items gap-8">
                                                 <button onClick={() => decreaseQuantity(item.id)}>-</button>
                                                 <span>{item.quantity}</span>
                                                 <button onClick={() => increaseQuantity(item.id)}>+</button>
