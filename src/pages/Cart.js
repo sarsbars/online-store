@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 function Cart() {
-    const { cartItems, removeFromCart } = useCart();
+    const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
 
     return (
         <section className="cart-page">
@@ -27,6 +27,11 @@ function Cart() {
                                             <h4>{item.title}</h4>
                                             <p><strong>Price:</strong> ${item.price}</p>
                                             <p><strong>Quantity:</strong> {item.quantity}</p>
+                                            <div className="quantity-controller flex gap-8">
+                                                <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                                                <span>{item.quantity}</span>
+                                                <button onClick={() => increaseQuantity(item.id)}>+</button>
+                                            </div>
                                             <button
                                                 className="remove-button"
                                                 onClick={() => removeFromCart(item.id)}
@@ -49,7 +54,7 @@ function Cart() {
                                         <img src={card} />
                                     </figure>
                                     <div className='terms-apply'>
-                                        <p> Get a $60 Gift Card if approved for the Amazon.ca Rewards Mastercard. Terms apply</p>
+                                        <p> Get a $60 Gift Card if approved for the Cartsy.ca Rewards Mastercard. Terms apply</p>
                                     </div>
                                 </div>
                             </div>
